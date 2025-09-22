@@ -22,11 +22,11 @@ jobs:
       - name: Convert Markdown to HTML
         run: |
           mkdir -p deploy
-          pandoc -s --css custom.css -o deploy/index.html index.md
+          pandoc -s --css style.css -o deploy/index.html index.md
 
       - name: Copy supporting files
         run: |
-          cp custom.css deploy/
+          cp style.css deploy/
           mv *.pdf deploy/
 
       - name: Deploy to GitHub Pages
