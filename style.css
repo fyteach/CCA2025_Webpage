@@ -1,0 +1,260 @@
+/* Simplified color palette with improved contrast */
+:root {
+    --primary-color: #2c3e50;      /* Dark blue-gray */
+    --secondary-color: #2980b9;    /* Medium blue - better contrast */
+    --accent-color: #e74c3c;       /* Red for accents */
+    --light-color: #ecf0f1;        /* Light gray */
+    --text-color: #2c3e50;         /* Dark text for better contrast */
+    --background-color: #ffffff;   /* White background */
+    --card-background: #ffffff;    /* White cards */
+    --footer-bg: #2c3e50;          /* Dark footer */
+    --footer-text: #ffffff;        /* White footer text */
+    --footer-link: #3498db;        /* Bright blue for footer links */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Card-like Sections */
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.download-section {
+    background-color: var(--light-color);
+    text-align: center;
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem 0;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2471a3;
+    transform: translateY(-2px);
+}
+
+/* Features Grid */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Curriculum Structure */
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.curriculum-part {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+}
+
+.curriculum-part:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.curriculum-part h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.curriculum-part ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    flex-grow: 1;
+}
+
+.curriculum-part li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+/* Footer with improved contrast */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer .container {
+    padding: 1rem 0;
+}
+
+footer a {
+    color: var(--footer-link);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #5dade2;
+}
+
+/* Update Notice */
+.update-notice {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    color: #856404;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .curriculum-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .curriculum-part {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .curriculum-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .container {
+        padding: 1rem 0;
+        width: 95%;
+    }
+    
+    .card, .feature-card {
+        padding: 1.25rem;
+    }
+    
+    .curriculum-part {
+        min-height: auto;
+        padding: 1.25rem;
+    }
+    
+    header {
+        padding: 1.5rem 0;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .card, .feature-card, .curriculum-part {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .curriculum-grid {
+        gap: 0.75rem;
+    }
+}
+
+/* High-resolution displays */
+@media (min-resolution: 2dppx) {
+    .btn {
+        border-width: 0.5px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .btn, .features, .update-notice {
+        display: none;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .curriculum-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
